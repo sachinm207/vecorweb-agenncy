@@ -678,16 +678,26 @@ ul { list-style: none; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
+  .nav-inner {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 12px 20px 0;
+  }
   .nav-links {
     display: flex;
-    margin-left: auto;
-    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 0;
+    gap: 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    margin-top: 10px;
   }
-  .nav-links a { font-size: 13px; }
+  .nav-links a { font-size: 13px; font-weight: 600; }
   .nav-ctas  { display: none; }
   .hamburger { display: none; }
 
-  .hero { padding: 110px 0 60px; }
+  .hero { padding: 130px 0 60px; }
 
   .features-grid { grid-template-columns: 1fr; }
   .feat-large { grid-column: 1; grid-row: auto; }
