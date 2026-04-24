@@ -35,7 +35,13 @@ if (form) {
     const btn = form.querySelector('.btn-submit');
     btn.textContent = 'Sending…';
     btn.disabled = true;
-    try { await fetch('/', { method: 'POST', body: new FormData(form) }); } catch (_) {}
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+    } catch (_) {}
     form.innerHTML = `
       <div class="form-success">
         <div class="fs-icon">✅</div>
