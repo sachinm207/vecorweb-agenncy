@@ -42,7 +42,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -90,7 +90,7 @@ ul { list-style: none; }
 /* ── Typography ── */
 .h2 {
   font-family: var(--serif);
-  font-size: clamp(30px, 4vw, 50px);
+  font-size: clamp(34px, 4vw, 54px);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.5px;
@@ -100,7 +100,7 @@ ul { list-style: none; }
 .h2 em { font-style: italic; }
 
 .lead {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--ink-2);
   line-height: 1.75;
   max-width: 560px;
@@ -242,7 +242,7 @@ ul { list-style: none; }
 }
 .hero-h1 {
   font-family: var(--serif);
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(44px, 6vw, 76px);
   font-weight: 400;
   line-height: 1.06;
   letter-spacing: -1px;
@@ -251,7 +251,7 @@ ul { list-style: none; }
 }
 .hero-h1 em { font-style: italic; color: var(--ink-2); }
 .hero-p {
-  font-size: 18px; color: var(--ink-2); line-height: 1.7;
+  font-size: 20px; color: var(--ink-2); line-height: 1.7;
   max-width: 540px; margin-bottom: 36px;
 }
 .hero-actions {
@@ -678,8 +678,14 @@ ul { list-style: none; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
-  .nav-links, .nav-ctas { display: none; }
-  .hamburger { display: flex; }
+  .nav-links {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+  }
+  .nav-links a { font-size: 13px; }
+  .nav-ctas  { display: none; }
+  .hamburger { display: none; }
 
   .hero { padding: 110px 0 60px; }
 
@@ -704,8 +710,12 @@ ul { list-style: none; }
 }
 
 @media (max-width: 580px) {
-  .hero-h1 { font-size: 36px; letter-spacing: -0.5px; }
-  .h2 { font-size: 28px; }
+  .hero-h1 { font-size: 40px; letter-spacing: -0.5px; }
+  .h2 { font-size: 32px; }
+  .hero-p { font-size: 18px; }
+  .lead  { font-size: 17px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; }
   .footer-nav { grid-template-columns: 1fr; }
   .hiw-steps { flex-direction: column; }
   .no-hosting-banner { flex-direction: column; }
